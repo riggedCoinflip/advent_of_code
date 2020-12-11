@@ -42,7 +42,7 @@ def part2_bigbrain(numbers: set, allowed_step_size: int = 3):
     cache = [1] + [0] * allowed_step_size
 
     for i in itertools.count(0):
-        if cache[i % len(cache)] is 0:  # number doesnt exist, skip it
+        if cache[i % len(cache)] == 0:  # number doesnt exist, skip it
             continue
         break_flag = True
         for step in range(1,4):
