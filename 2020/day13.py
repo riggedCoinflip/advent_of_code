@@ -1,9 +1,9 @@
-import math
+from math import prod
 from sympy.ntheory.modular import crt
 
 with open(f'day13_input.txt') as f:
     entries = [line.rstrip() for line in f]
-    #timestamp = int(entries[0])
+    timestamp = int(entries[0])
     busses = entries[1].split(',')
 
 def part1(timestamp, busses):
@@ -13,7 +13,7 @@ def part1(timestamp, busses):
             bus = int(bus)
             till_arrival[bus] = bus - (timestamp % bus)
     earliest_bus = (min(till_arrival.items(), key=lambda x: x[1]))
-    return math.prod(earliest_bus)
+    return prod(earliest_bus)
 
 def part2(busses):
     coprimes = []
@@ -26,5 +26,6 @@ def part2(busses):
     return b - a
 
 if __name__ == '__main__':
+    print(part1(timestamp, busses))
     print(part2(busses))
 
