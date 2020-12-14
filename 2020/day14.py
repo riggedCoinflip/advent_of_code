@@ -13,7 +13,7 @@ def part1(entries):
         if instruction.startswith('mask'):
             mask = value
         else:
-            m = re.search('\[([^]]*)\]', instruction)
+            m = re.search('\[([^]]*)', instruction)
             memcell = int(m.group(1))
             value = f'{int(value):b}'
             value = value.zfill(36)
@@ -33,7 +33,7 @@ def part2(entries):
             value = f'{int(value):b}'
             value = value.zfill(36)
 
-            m = re.search('\[([^]]*)\]', instruction)
+            m = re.search('\[([^]]*)', instruction)
             memcell = int(m.group(1))
             memcell = f'{int(memcell):b}'
             memcell = memcell.zfill(36)
