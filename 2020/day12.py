@@ -57,9 +57,8 @@ def part_2(entries):
     print(ship_x, ship_y)
     return abs(ship_x) + abs(ship_y)
 
-def part_1_turtle():
+def part_1_turtle(entries):
     turtle.speed(0)
-    turtle.right(90)
     for instruction, value in entries:
         if instruction == 'L':
             turtle.left(value)
@@ -82,5 +81,7 @@ def part_1_turtle():
     return abs(x) + abs(y)
 
 if __name__ == '__main__':
+    print(part_1(entries))
+    print(part_1_turtle(entries))
     print(part_2(entries))
-    #turtle.done()
+    turtle.done()
