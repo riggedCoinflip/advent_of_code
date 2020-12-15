@@ -12,17 +12,3 @@ def part2(entries):
 
 if __name__ == '__main__':
     print(part1(entries))
-with open(f'day1_input.txt') as f:
-    entries = [line.rstrip() for line in f]
-
-
-def part1(entries):
-    pass
-
-
-def part2(entries):
-    pass
-
-
-if __name__ == '__main__':
-    print(part1(entries))
